@@ -1,14 +1,14 @@
-//
-//  main.cpp
-//  S_H_W
-//
-//  Created by Grayden Scovil on 2/1/25.
-//
-
 #include <iostream>
+#include <string>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+char hello(char message) {
+    cout << "Hello World" << "\n";
+    return 0;
+}
+
+int main() {
+    char message {};
+    hello(message);
     return 0;
 }
