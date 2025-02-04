@@ -38,13 +38,45 @@ int bubbleSort() {
     return 0;
 }
 
-int main() {
-//    hello();
-//    bubble();
-    bubbleSort();
-    
-    cout << "\n";
-    return 0;
+void insertionSort(vector<int> & arr) {
+    size_t i = 1;
+    while (i < arr.size()) {
+        int key = arr[i];
+        size_t j = i;
+        while (j > 0 && arr[j - 1] > key) {
+            arr[j] = arr[j - 1];
+            --j;
+        }
+        arr[j] = key;
+        ++i;
+    }
 }
 
 
+int main() {
+    //    hello();
+    //    bubble();
+    //    bubbleSort();
+    
+    // Input
+    int m;
+    cout << "Elements:\n";
+    cin >> m;
+    vector<int> arr(m);
+    cout << "\nEnter " << m << " intgers:\n";
+    for (int i = 0 ; i < m ; ++i) {
+        cin >> arr[i];
+    }
+    
+    // Logic
+    insertionSort(arr);
+    
+    // Output
+    cout << "\nOutput:\n";
+    for (const int & num : arr) {
+        cout << num << " ";
+    }
+    
+    cout << "\n\n";
+    return 0;
+}
