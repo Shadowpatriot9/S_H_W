@@ -52,6 +52,19 @@ void insertionSort(vector<int> & arr) {
     }
 }
 
+void insertionSort2(vector<int> & arr){
+    size_t i = 1;
+    while (i < arr.size()) {
+        int x = arr[i];
+        size_t j = i;
+        while (j > 0 && arr[j - 1] > x) {
+            arr[j] = arr[j - 1];
+            --j;
+        }
+        arr[j] = x;
+        ++i;
+    }
+}
 
 int main() {
     //    hello();
@@ -63,17 +76,18 @@ int main() {
     cout << "Elements:\n";
     cin >> m;
     vector<int> arr(m);
-    cout << "\nEnter " << m << " intgers:\n";
+    cout << "\nEnter " << m << " integers:\n";
     for (int i = 0 ; i < m ; ++i) {
         cin >> arr[i];
     }
     
-    // Logic
-    insertionSort(arr);
+//    // Logic
+//    insertionSort(arr);
+    insertionSort2(arr);
     
     // Output
     cout << "\nOutput:\n";
-    for (const int & num : arr) {
+    for (int & num : arr) {
         cout << num << " ";
     }
     
