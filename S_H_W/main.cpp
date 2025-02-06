@@ -66,30 +66,54 @@ void insertionSort2(vector<int> & arr){
     }
 }
 
+
+
 int main() {
     //    hello();
     //    bubble();
     //    bubbleSort();
     
-    // Input
-    int m;
-    cout << "Elements:\n";
-    cin >> m;
-    vector<int> arr(m);
-    cout << "\nEnter " << m << " integers:\n";
-    for (int i = 0 ; i < m ; ++i) {
-        cin >> arr[i];
+    //    // Input
+    //    int m;
+    //    cout << "Elements:\n";
+    //    cin >> m;
+    //    vector<int> arr(m);
+    //    cout << "\nEnter " << m << " integers:\n";
+    //    for (int i = 0 ; i < m ; ++i) {
+    //        cin >> arr[i];
+    //    }
+    //
+    ////    // Logic
+    ////    insertionSort(arr);
+    //    insertionSort2(arr);
+    //
+    //    // Output
+    //    cout << "\nOutput:\n";
+    //    for (int & num : arr) {
+    //        cout << num << " ";
+    //    }
+    //
+    
+    long long int z[10];
+    int a = 0;
+    for (int i = 0 ; i < z[a] ; i++) {
+        cout << z[a] << "\n";
+        a++;
     }
     
-//    // Logic
-//    insertionSort(arr);
-    insertionSort2(arr);
+    int potato = 30;
+    int * ze_pointar = &potato;
+    cout << "\n" << * ze_pointar << "\n\n";
+    cout << "HI \n\n\n";
     
-    // Output
-    cout << "\nOutput:\n";
-    for (int & num : arr) {
-        cout << num << " ";
+    int j = 0;
+    int array[5] = {1,2,3,4,5};
+    for (int l = 0 ; l < array[j] ; l++) {
+        cout << array[j];
+        j++;
     }
+    
+    
     
     cout << "\n\n";
     return 0;
