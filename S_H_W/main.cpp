@@ -214,45 +214,63 @@ void shape_generator() {
     }
 }
 
-int main() {
-    //    hello();
-    //    bubbleSort();
-    //    foo();
+void chess_piece_box () {
 
     
-    //    // Input
-    //    int m;
-    //    cout << "Elements:\n";
-    //    cin >> m;
-    //    vector<int> arr(m);
-    //    cout << "\nEnter " << m << " integers:\n";
-    //    for (int i = 0 ; i < m ; ++i) {
-    //        cin >> arr[i];
-    //    }
-    //
-    ////    // Logic
-    ////    insertionSort(arr);
-    //    insertionSort2(arr);
-    //
-    //    // Output
-    //    cout << "\nOutput:\n";
-    //    for (int & num : arr) {
-    //        cout << num << " ";
-    //    }
-    //
-    
-    string temp;
-    cout << "Enter text:\n";
-    cin >> temp;
-    vector<char> input(temp.begin(), temp.end());
-    
-//    vector<int> input =  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 30};
-    auto divisible_by_three = [](const int n) {return n % 3 == 0;};
-    auto x = input | views::filter(divisible_by_three);
+//    for (int i = 0; i < top_bot; i++) {
+//        cout << box_top;
+//    }
+//    cout << endl;
+//    for (int j = 0; j < sides_height ; j++){
+//        cout << sides << "   " << sides << endl;
+//    }
+//    for (int i = 0; i < top_bot; i++) {
+//        cout << box_top;
+//    }
+//
 
-    for (int i : x) {
-        cout << i << ' ';
+}
+
+void chess_board (int size_x, int size_y) {
+    int top_bot_x = 5;
+    int x = top_bot_x * size_x;
+    char sides {'|'};
+    int sides_height = 2;
+    
+    // Top Line
+    for (int i = 0 ; i < x ; i ++) {
+        cout << '=';
     }
+    cout << endl;
+    
+    // Box Sides
+    for (int i = 0 ; i < size_x; i++) {
+        for (int j = 0; j < sides_height ; j++){
+            cout << sides << "   " << sides << endl;
+        }
+        // Mid Lines
+        for (int i = 0 ; i < x ; i ++) {
+            cout << '-';
+        }
+        cout << endl;
+    }
+    
+    // Bot Line
+    for (int i = 0 ; i < x ; i ++) {
+        cout << '=';
+    }
+}
+
+int main() {
+    
+    int size_x;
+    int size_y;
+    cout << "How Wide? ";
+    cin >> size_x;
+    cout << "How Tall? ";
+    cin >> size_y;
+    
+    chess_board(size_x, size_y);
     
     cout << "\n\n";
     return 0;
